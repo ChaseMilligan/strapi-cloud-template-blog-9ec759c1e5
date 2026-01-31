@@ -15,6 +15,9 @@
       "type": "component",
       "component": "home.mot-ds",
       "repeatable": true
+    },
+    "Hero": {
+      "type": "richtext"
     }
   }
 }
