@@ -595,12 +595,12 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiTestTest extends Struct.SingleTypeSchema {
-  collectionName: 'tests';
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
+  collectionName: 'homes';
   info: {
-    displayName: 'Test';
-    pluralName: 'tests';
-    singularName: 'test';
+    displayName: 'Home';
+    pluralName: 'homes';
+    singularName: 'home';
   };
   options: {
     draftAndPublish: true;
@@ -610,10 +610,10 @@ export interface ApiTestTest extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::test.test'> &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
+    MOTDs: Schema.Attribute.Component<'home.mot-ds', true>;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1135,7 +1135,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
-      'api::test.test': ApiTestTest;
+      'api::home.home': ApiHomeHome;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_home_mot_ds",
+  "info": {
+    "displayName": "MOTDs"
+  },
+  "options": {},
+  "attributes": {
+    "Message": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
